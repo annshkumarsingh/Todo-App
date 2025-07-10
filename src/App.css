@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.btn{
+    @apply bg-fuchsia-600 hover:bg-fuchsia-500 hover:scale-[1.02] delay-25 duration-100;
+}
