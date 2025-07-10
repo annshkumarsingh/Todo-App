@@ -1,12 +1,80 @@
-# React + Vite
+# 📝 To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive To-Do list web app built with **React**. It allows users to add, edit, check/uncheck, and delete tasks — with persistent storage using **localStorage**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Add new tasks
+- ✏️ Double-click to edit tasks
+- ☑️ Mark tasks as completed (checkbox)
+- ❌ Delete individual tasks
+- 🗑️ Clear all tasks
+- 💾 Tasks persist on refresh using **localStorage**
+- 📱 Responsive layout (mobile + desktop)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Built With
+
+- **React**
+- **Tailwind CSS**
+- **UUID (for unique task IDs)**
+- **LocalStorage API**
+
+---
+
+## 📸 Preview
+
+![screenshot](https://via.placeholder.com/600x300.png?text=Add+a+screenshot+or+GIF+here)
+
+---
+
+## 📂 Folder Structure
+
+Todo-App/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── Navbar.jsx
+│ │ └── Tasks.jsx
+│ ├── App.jsx
+│ ├── App.css
+│ └── index.js
+└── package.json
+
+
+---
+
+## 🧠 What I Learned
+
+- State management with React Hooks
+- Passing and handling props across components
+- Dynamic styling with Tailwind CSS
+- Persistent data storage using `localStorage`
+- Git & GitHub basics for deployment
+
+---
+
+## 🔗 Live Demo (Optional)
+
+> Coming soon via Vercel / Netlify / GitHub Pages!
+
+---
+
+## 📌 Getting Started (For Developers)
+
+Clone and run locally:
+
+```bash
+git clone https://github.com/annshkumarsingh/Todo-App.git
+cd Todo-App
+npm install
+npm run dev
+
+📄 License
+This project is open-source and free to use.
+
+🙋‍♂️ Author
+Annsh Kumar Singh
