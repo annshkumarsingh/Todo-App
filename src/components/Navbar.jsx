@@ -8,10 +8,10 @@ const Navbar = () => {
                     To-Do Buddy
                 </div>
                 <ul className='text-white flex gap-25 h-[100%]'>
-                    <li className='hover:bg-slate-700 h-[100%] flex items-center justify-center px-4'>
+                    <li className='hover:bg-slate-700 h-[100%] flex items-center justify-center px-4 cursor-pointer'>
                         <span className=''>Home</span>
                     </li>
-                    <li className='hover:bg-slate-700 h-[100%] flex items-center justify-center px-4'>
+                    <li className='hover:bg-slate-700 h-[100%] flex items-center justify-center px-4 cursor-pointer'>
                         <span className=''>Tasks</span>
                     </li>
                 </ul>

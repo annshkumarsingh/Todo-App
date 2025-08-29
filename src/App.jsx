@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
-  const didMount = useRef(false); 
+  const didMount = useRef(false);
 
   // Load from localStorage
   useEffect(() => {
@@ -56,32 +56,32 @@ function App() {
   };
 
   const toggleCheck = (id) => {
-  setTodos(prev =>
-    prev.map(item =>
-      item.id === id ? { ...item, checked: !item.checked } : item
-    )
-  );
-};
-
-  
+    setTodos(prev =>
+      prev.map(item =>
+        item.id === id ? { ...item, checked: !item.checked } : item
+      )
+    );
+  };
 
   return (
     <>
       <Navbar />
 
       <div className="bg-slate-200 font-black min-h-[90vh] sm:min-h-[95vh] flex justify-center items-center">
-        <div className="bg-white w-[300px] min-h-[200px] sm:w-[450px] lg:w-[450px] my-[100px] p-[30px] flex flex-col gap-8 justify-between rounded-md border-black">
+        <div className="bg-white w-full max-w-[450px] min-h-[200px] my-10 sm:my-20 p-[30px] flex flex-col gap-8 justify-between rounded-md border border-black">
 
           <span className='mx-[20px] text-center'>
             <h1 className='text-4xl text-slate-600'>To-Do's</h1>
           </span>
 
-          <div className="flex gap-5 w-[80%] mx-[20px] flex-col items-center sm:flex-row justify-between ">
+          {/* Input + Add Button */}
+          <div className="flex gap-5 w-[80%] mx-[20px] flex-col sm:flex-row flex-wrap items-center justify-between">
             <input
               type="text"
               onChange={handleChange}
               value={todo}
-              className='border-1 h-[35px] hover:border-2 delay-25 duration-100 border-black rounded-md px-5 font-medium'
+              className='border-1 h-[35px] hover:border-2 delay-25 duration-100 border-black rounded-md px-5 font-medium w-full sm:w-auto flex-1'
+              placeholder="Enter a task..."
             />
             <button
               onClick={addTask}
@@ -96,6 +96,7 @@ function App() {
             </button>
           </div>
 
+          {/* Tasks List */}
           {todos.length > 0 ? (
             <div className='w-[80%] mx-[20px]'>
               {todos.map((item) =>
@@ -115,12 +116,17 @@ function App() {
             </div>
           )}
 
-          <div className="w-[80%] mx-[20px] flex flex-col justify-between sm:flex-row gap-5 items-center font-medium">
-            <p>There {todos.length === 1 ? 'is' : 'are'} currently {todos.length} task{todos.length === 1 ? '' : 's'}</p>
+          {/* Footer */}
+          <div className="w-[80%] mx-[20px] flex flex-col sm:flex-row gap-5 items-center font-medium justify-between">
+            <p>
+              There {todos.length === 1 ? 'is' : 'are'} currently {todos.length} task{todos.length === 1 ? '' : 's'}
+            </p>
             <button
               onClick={clearTasks}
               className='btn border-1 border-black flex justify-center items-center py-[5px] px-[10px] text-white rounded-sm'
-            >Clear All</button>
+            >
+              Clear All
+            </button>
           </div>
         </div>
       </div>
